@@ -12,12 +12,13 @@ The driver demonstrates low-level embedded programming concepts including:
 - SPI full-duplex communication
 - peripheral initialization
 
-The project is designed to simulate how embedded firmware communicates directly with hardware peripherals.
+The project demonstrates how embedded firmware interacts directly with hardware peripherals through register-level programming and polling-based communication.
 
 ---
 
 ## Project Structure
 
+```text
 spi-driver-c/
 │
 ├── include/
@@ -28,6 +29,7 @@ spi-driver-c/
 │   └── main.c
 │
 └── README.md
+```
 
 ---
 
@@ -90,7 +92,9 @@ Performs simultaneous transmit and receive using SPI full-duplex communication.
 
 The demo application continuously performs SPI transfers using:
 
-``` received_data = spi_transfer_byte(0x55); ``` 
+```c
+received_data = spi_transfer_byte(0x55);
+``` 
 
 The transmitted byte is sent through MOSI while incoming data is simultaneously received through MISO.
 
